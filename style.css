@@ -1,0 +1,27 @@
+.header {
+    text-align: center;
+    color: #302b90;
+}
+
+.content {
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #373535;
+    background-color: #f9f9f9;
+}
+.h2{
+    color: #3f8212;
+}
+
+#button{
+    border: 1px solid rgb(16, 127, 164);
+    border-radius: 15px;
+    background-color: #a6f771;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Styling using IDs */
+#realTimeDisplay {
+    font-weight: bold;
+    color: rgb(96, 163, 20);
+}

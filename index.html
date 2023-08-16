@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple HTML Page with CSS</title>
+    <style>
+        /* Styling using classes */
+        .header {
+            text-align: center;
+            color: #302b90;
+        }
+
+        .content {
+            margin: 20px;
+            padding: 10px;
+            border: 1px solid #373535;
+            background-color: #f9f9f9;
+        }
+
+        .h2 {
+            color: #3f8212;
+        }
+
+        #button {
+            border: 1px solid rgb(16, 127, 164);
+            border-radius: 15px;
+            background-color: #a6f771;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        /* Styling using IDs */
+        #realTimeDisplay {
+            font-weight: bol d;
+            color: rgb(96, 163, 20);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <h1>A Real Time Display Page</h1>
+    </header>
+
+    <div class="content">
+        <h2 class="h2">Introduction</h2>
+        <p class="p">This Page shows you the Real Date and Time.</p>
+
+        <h2 class="h2">Content</h2>
+        <p class="p">Here we have shown you the real time display.</p>
+
+        <h3 class="h2">So how this Works</h3>
+        <p class="p">At first we have created a <em>Button</em> and with the help of JavaScript we added a <em>Event Listener</em> method, which help the button to run code after click on button.</p>
+        <p class="p">Then we have used a function called <strong>Set Interval</strong> which allows you to set the interval in your function.</p>
+        <p class="p">And then we have used a function <strong>New Date</strong> to show you the real time.
+        </p>
+        <p class="p">
+            <em>To check the real time and date please click on the button </em>
+            <strong>"Click Here" </strong>
+        </p>
+
+        <h2 class="h2">Real-Time Display</h2>
+        <button id="button">Click Here</button>
+        <p id="realTimeDisplay" class="p">This text can be updated in real-time using JavaScript.</p>
+    </div>
+
+    <script>
+        // Example of real-time display update
+        //    setInterval (()=>{
+        //     const realTimeDisplay=document.getElementById("realTimeDisplay");
+        //     realTimeDisplay.textContent= "Update in real-time and date : " + new Date().toLocaleString();
+        //    },1000)
+
+        document.getElementById("button").addEventListener("click", () => {
+            setInterval(() => {
+                document.getElementById("realTimeDisplay").textContent = new Date().toLocaleString()
+            }, 1000);
+        });
+
+    </script>
+</body>
+
+</html>
